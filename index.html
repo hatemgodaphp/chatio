@@ -19,6 +19,8 @@
   #chatwindow{
 
   height: 300px;
+  overflow:auto;
+
 
 
   }
@@ -142,7 +144,7 @@
 	
 	socket.on('new message',function(data){	
 	$chat.append('<strong>'+data.user+'</strong>: '+data.msg +'<br>');
-	
+	$chat.scrollTop($chat.prop("scrollHeight"));
 	
 	});
 	
